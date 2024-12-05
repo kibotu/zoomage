@@ -1,49 +1,27 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
+ext {
+    minSdkVer = 21
+    compileSdkVer = 35
+    buildToolsVer = "35.0.0"
+    targetSdkVer = 35
+
+    VERSION_NAME = 0
+}
+
 
 buildscript {
     repositories {
-        jcenter()
-        mavenCentral()
         google()
-
-        maven{
-            url "https://plugins.gradle.org/m2/"
-        }
+        mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.6.1'
-        classpath "gradle.plugin.nl.javadude.gradle.plugins:license-gradle-plugin:0.13.1"
+        classpath 'com.android.tools.build:gradle:8.7.3'
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:2.1.0'
     }
-}
-
-plugins {
-    id "com.jfrog.bintray" version "1.8.4"
-    id "com.jfrog.artifactory" version "4.9.3"
-    id 'maven-publish'
 }
 
 allprojects {
     repositories {
-        jcenter()
         google()
+        mavenCentral()
     }
-
-    configurations.all {
-        apply plugin: 'com.github.hierynomus.license'
-
-        license {
-            header rootProject.file('LICENSE_HEADER')
-            exclude("**/ic_settings.xml")
-        }
-    }
-}
-
-task clean(type: Delete) {
-    delete rootProject.buildDir
-}
-
-ext {
-    supportVersion = '1.1.0'
-    compileVersion = 28
-    targetVersion = 28
 }

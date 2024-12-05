@@ -81,22 +81,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onCheckedChanged(final CompoundButton buttonView, final boolean isChecked) {
-        switch (buttonView.getId()) {
-            case R.id.zoomable:
-                demoView.setZoomable(isChecked);
-                break;
-            case R.id.translatable:
-                demoView.setTranslatable(isChecked);
-                break;
-            case R.id.restrictBounds:
-                demoView.setRestrictBounds(isChecked);
-                break;
-            case R.id.animateOnReset:
-                demoView.setAnimateOnReset(isChecked);
-                break;
-            case R.id.autoCenter:
-                demoView.setAutoCenter(isChecked);
-                break;
+        int id = buttonView.getId();
+        if (id == R.id.zoomable) {
+            demoView.setZoomable(isChecked);
+        } else if (id == R.id.translatable) {
+            demoView.setTranslatable(isChecked);
+        } else if (id == R.id.restrictBounds) {
+            demoView.setRestrictBounds(isChecked);
+        } else if (id == R.id.animateOnReset) {
+            demoView.setAnimateOnReset(isChecked);
+        } else if (id == R.id.autoCenter) {
+            demoView.setAutoCenter(isChecked);
         }
     }
 
