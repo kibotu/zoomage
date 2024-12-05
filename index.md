@@ -1,30 +1,21 @@
 # zoomage
-[![Build Status](https://travis-ci.org/jsibbold/zoomage.svg?branch=master)](https://travis-ci.org/jsibbold/zoomage) [ ![Download](https://api.bintray.com/packages/jsibbold/maven/zoomage/images/download.svg) ](https://bintray.com/jsibbold/maven/zoomage/_latestVersion) <a href="http://www.detroitlabs.com/"><img src="https://img.shields.io/badge/Sponsor-Detroit%20Labs-000000.svg" /></a>
+[![Android CI](https://github.com/kibotu/zoomage/actions/workflows/android.yml/badge.svg)](https://github.com/kibotu/zoomage/actions/workflows/android.yml) [![](https://jitpack.io/v/kibotu/zoomage.svg)](https://jitpack.io/#kibotu/zoomage)
 
 A simple pinch-to-zoom ImageView library for Android with an emphasis
 on a smooth and natural feel.
 
-
-
 ## Gradle
 ```groovy
-repositories {
-    jcenter()
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
 }
 
 dependencies {
-    implementation 'com.jsibbold:zoomage:1.3.0'
-}
-```
-
-### For the latest snapshot use
-```groovy
-repositories {
-    maven { url 'https://oss.jfrog.org/artifactory/oss-snapshot-local' }
-}
-
-dependencies {
-    implementation 'com.jsibbold:zoomage:1.3.1-SNAPSHOT'
+    implementation 'com.github.kibotu:zoomage:Tag'
 }
 ```
 
@@ -124,7 +115,7 @@ Sets the scale factor for double tap to zoom functionality. Default is 3.
 
 # License
 ```
-Copyright 2016 Jeffrey Sibbold
+Copyright 2016 Jeffrey Sibbold & Jan Rabe 2024
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
