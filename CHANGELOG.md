@@ -1,5 +1,8 @@
 # Zoomage Change Log
 
+## 2.0.5 (2024-05.12)
+- converted to kotlin
+
 ## 2.0.0 (2024-05.12)
 - updated dependencies
 - updated to android 15
