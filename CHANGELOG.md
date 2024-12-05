@@ -1,5 +1,12 @@
 # Zoomage Change Log
 
+## 2.0.0 (2024-05.12)
+- updated dependencies
+- updated to android 15
+- removed jetifier
+- migrated to jitpack
+- migrated to github actions
+
 ## 1.3.1 (2020-03-27)
 - Added more granular handling for disallowing parent touch interception
 - Add protected methods for allowing zoom and translation
