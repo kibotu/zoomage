@@ -20,10 +20,21 @@ android {
         }
     }
 
-    lintOptions {
-        textReport true
-        textOutput "stdout"
+    // region lint options
+
+    lint {
+        disable 'TypographyFractions', 'TypographyQuotes', 'InvalidPackage'
+        enable 'RtlHardcoded', 'RtlCompat', 'RtlEnabled'
+        checkOnly 'NewApi', 'InlinedApi'
+        quiet true
+        abortOnError false
+        ignoreWarnings true
+        checkDependencies true
+        ignoreTestSources true
+        checkAllWarnings false
     }
+
+    // endregion
 
     // region java compile options
 
