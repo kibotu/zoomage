@@ -1,1 +1,2 @@
-include ':example', ':zoomage'
+include ':example'
+include ':zoomage'
