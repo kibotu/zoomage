@@ -109,7 +109,7 @@ open class ZoomageView : AppCompatImageView, OnScaleGestureListener {
     private fun init(context: Context, attrs: AttributeSet?) {
         scaleDetector = ScaleGestureDetector(context, this)
         gestureDetector = GestureDetector(context, gestureListener)
-        ScaleGestureDetectorCompat.setQuickScaleEnabled(scaleDetector, false)
+        ScaleGestureDetectorCompat.setQuickScaleEnabled(scaleDetector!!, false)
         startScaleType = scaleType
 
         val values = context.obtainStyledAttributes(attrs, R.styleable.ZoomageView)
